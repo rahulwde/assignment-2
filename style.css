@@ -28,6 +28,10 @@ font-weight: 400;
   grid-template-columns: repeat(3 , 1fr);
 
 }
+.grid-four-cols{
+  grid-template-columns: repeat(4 , 1fr);
+
+}
 img{
   width: 100%;
 }
@@ -144,8 +148,9 @@ p{
 
 /***** hero *****/ 
 .hero-section{
-  margin: 20px 140px 3.8rem;
-  display: flex;
+  margin: 20px 140px ;
+ display: flex;
+ gap: 130px;
   align-items: center;
 
   & .hero-content{
@@ -213,12 +218,13 @@ p{
 
 
  .main{
-  margin: 0 140px;
-  padding: 20px;
+ 
 
   /* position: relative; */
 
   & .card-section{
+    margin: 0 140px;
+    padding: 20px;
     background: url(./assets/bg.png);
     background-size: cover;
     background-position: center;
@@ -361,19 +367,144 @@ p{
 /* stories */
 
 .main .stories-section{
-  margin: 60px 0 80px;
-  position: relative;
+  background:linear-gradient( to top , rgba(245, 206, 139, 0.432) 0% , rgba(255, 255, 255, 1) 100%), url(./assets/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  & .stories{
+  & .story-container{
+    margin: 0 140px;
+    padding: 20px;
+   & .stories{
+    margin: 80px 0;
+    font-size: 34px;
     font-weight: bold;
-    font-size: 46px;
-    margin-bottom: 60px;
-  }
-  & .stories-card-section{
+   }
+   & .stories-card-section{
     gap: 20px;
 
     & .story-1{
       max-width: 540px;
-    }
+      height: 630px;
+      background-color: white;
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+    & .card-img img{
+     border-top-left-radius: 18px;
+     border-top-right-radius: 18px;
+    
+}
+& .card-content{
+  padding: 38px;
+  position: relative;
+   & .card-date{
+    background-color: rgba(60, 216, 232, 1);
+    padding: 8px 10px;
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    top: -20px;
+}
+  & .card-title{
+    margin-bottom: 80px;
   }
+  & .card-description {
+    line-height: 30px;
+  }
+}
+   }
+
+  }
+}
+& .stories-btn{
+  display: flex;
+  justify-content: center;
+;
+}
+
+& .stories-btn button{
+  margin: 60px 0;
+  padding: 10px 47px;
+  background-color: black;
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.small-stories{
+  gap: 20px;
+
+  & .story-2 , .story-3 , .story-4 , .story-5{
+    max-width: 290px;
+    height: auto;
+    background-color: white;
+    border-radius: 18px;
+   
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+
+    & .card-img img{
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+     
+ }
+ & .card-content{
+   padding: 38px;
+   position: relative;
+    & .card-date{
+     background-color: rgba(149, 178, 38, 1);
+     padding: 8px 10px;
+     position: absolute;
+     color: white;
+     font-size: 14px;
+     border-radius: 15px;
+     -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+     -ms-border-radius: 15px;
+     -o-border-radius: 15px;
+     top: -20px;
+ }
+ & .different{
+  background-color: rgba(93, 88, 240, 1);
+ }
+ & .card-title{
+  font-size: 15px;
+ }
+  }
+}
+}
+}
+
+/* stories section responsive */
+@media (max-width:576px) {
+  .main .stories-section .story-container {
+    margin: 0 ;
+    padding: 15px;
+    & .stories{
+      margin: 20px;
+    }
+
+    .stories-card-section{
+      display: block;
+    }
+    & .story-1{
+      display: none;
+    }
+}
+}
+.small-stories .card-content .card-date{
+  left: 15px;
 }
