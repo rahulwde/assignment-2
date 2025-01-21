@@ -10,14 +10,16 @@ font-weight: 400;
 
 }
 /***** share  *****/ 
-
+.text-center{
+  text-align: center;
+}
 .container{
   max-width: 1160px;
   margin: 0 auto;
   padding: 8rem 2rem;
 }
 .grid{
-  display: flex;
+  display: grid;
 }
 .grid-two--cols{
   grid-template-columns: repeat(2 , 1fr);
@@ -37,7 +39,7 @@ li{
 }
 p{
   color: rgba(102, 102, 102, 1);
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 
@@ -110,6 +112,8 @@ p{
 @media  (max-width:576px) {
 
   .nav-bar{
+    padding: 10px 0;
+    border-bottom: 1px solid var(--primary-color);
   margin: 0;
     & img{
       width: 46px;
@@ -205,6 +209,171 @@ p{
 
 /***** End hero responsive *****/
 
-.diplay{
-  display:none;
+ /***** main section *****/ 
+
+
+ .main{
+  margin: 0 140px;
+  padding: 20px;
+
+  /* position: relative; */
+
+  & .card-section{
+    background: url(./assets/bg.png);
+    background-size: cover;
+    background-position: center;
+    
+
+
+
+   
+  & .curriculum{
+    font-size: 2.8rem;
+    margin-bottom: 80px;
+  
+   }
+
+
+  & .curriculum-card{
+
+
+    margin: 80px 0;
+    gap: 28px;
+    justify-content: space-between;
+
+
+    & .kids-card{
+      max-width: 350px;
+
+      padding: 30px;
+      background: linear-gradient( to bottom , rgba(222, 245, 255, 1) 0% , rgba(255, 255, 255, 0) 40%);
+      box-shadow: 5px 2px 5px 3px rgba(0,0,0,0.16);
+      -webkit-box-shadow: 5px 2px 5px 3px rgba(0,0,0,0.16);
+      -moz-box-shadow: 5px 2px 5px 3px rgba(0,0,0,0.16);
+      border-radius: 18px;
+      -webkit-border-radius: 18px;
+      -moz-border-radius: 18px;
+      -ms-border-radius: 18px;
+      -o-border-radius: 18px;
+      display: grid;
+      place-items: center;
+  
+}
+
+& .card-1{
+  background: linear-gradient( to bottom ,rgba(255, 244, 220, 1) 0% , rgba(255, 255, 255, 0) 40%);
+   & .card-btn{
+    color:rgba(234, 163, 10, 0.663) ;
+   }
+
+}
+
+& .card-2{
+  background: linear-gradient( to bottom ,rgba(238, 225, 255, 1) 0% , rgba(255, 255, 255, 0) 40%);
+  & .card-btn{
+    color: rgb(100, 13, 212);
+  }
+
+}
+& .card-img{
+  max-width: 130px;
+  height: auto;
+  margin-bottom: 32px;
+  
+
+}
+.card-description{
+  line-height: 28.3px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+& .card-btn{
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+  }
+
+}
+  
+}
+
+
+.main .arrow-icon{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ font-size: 24px;
+ 
+
+ & .fa-solid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: var(--primary-color);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+}
+ /* card responsive */
+
+@media (max-width:576px) {
+  .main .curriculum-card{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .main{
+    margin: 0;
+
+
+    & .card-section {
+       margin: 0;
+
+       & .curriculum-card{
+        margin: 20px 0;
+       }
+     & .curriculum {
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 20px;
+    
+    }
+  }
+  
+  & .arrow-icon{
+    display: none;
+   }
+  }
+
+}
+
+
+
+ /***** End main section *****/
+ 
+/* stories */
+
+.main .stories-section{
+  margin: 60px 0 80px;
+  position: relative;
+
+  & .stories{
+    font-weight: bold;
+    font-size: 46px;
+    margin-bottom: 60px;
+  }
+  & .stories-card-section{
+    gap: 20px;
+
+    & .story-1{
+      max-width: 540px;
+    }
+  }
 }
