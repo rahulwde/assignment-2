@@ -345,7 +345,16 @@ marquee .animate{
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  transition: background .3s;
+  -webkit-transition: background .3s;
+  -moz-transition: background .3s;
+  -ms-transition: background .3s;
+  -o-transition: background .3s;
 }
+}
+
+.main .arrow-icon .fa-solid:hover{
+  background-color: var(--secondary-color);
 }
  /* card responsive */
 
