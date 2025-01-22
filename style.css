@@ -53,8 +53,29 @@ p{
   --big-card-btn:rgba(60, 216, 232, 1);
   --card-btn:rgba(149, 178, 38, 1);
 }
-/***** End share  *****/
 
+
+/***** End share  *****/
+/* marquee */
+
+marquee .animate{
+  animation: animate 3s linear 1s infinite alternate forwards;
+  -webkit-animation: animate 3s linear 1s infinite alternate forwards;
+}
+@keyframes animate {
+   0%{
+    color: var(--primary-color);
+   }
+   25%{
+    color: var(--secondary-color);
+   }
+   50%{
+    color: var(--big-card-btn);
+   }
+   100%{
+    color: var(--card-btn);
+   }
+}
 
 .nav-bar{
   margin: 20px 140px;
